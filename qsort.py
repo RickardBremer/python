@@ -1,6 +1,6 @@
 #
 #	punkiq130@gmail.com 
-#
+#	quicksort
 
 import random
 
@@ -12,15 +12,15 @@ def qsort(qslist):
 	if (len(qslist) < 2):
 		return qslist
 
-	elif (len(qslist) > 1):
+	else:
+		pivot = random.choice(qslist)
 
-		pivot = qslist[int(random.randrange(len(qslist)))]
-
-		for x in range(len(qslist)):
-			if qslist[x] <= pivot: 
-				small.append(qslist[x])
-			else: 
-				big.append(qslist[x])
+		for x in qslist:
+			if x <= pivot: 
+				small.append(x)
+			elif x > pivot:
+				big.append(x)
+			
 		if(len(big) == 0):
 			big.append(pivot)
 			small.remove(pivot)
