@@ -1,3 +1,6 @@
+#
+#	punkiq130@gmail.com 
+#
 
 import random
 
