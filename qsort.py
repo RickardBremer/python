@@ -6,12 +6,12 @@ import random
 
 def qsort(qslist):
 	
-	small = []
-	big = []
 
 	if (len(qslist) < 2):
 		return qslist
 
+	big = []
+	small = []
 
 	pivot = random.choice(qslist)
 
