@@ -4,11 +4,11 @@
 
 def merge_sort(mslist):
 
-	if len(mslist) < 2:
+	if len(mslist) <= 1:
 		return mslist
 
-	left = mslist[:int(len(mslist)/2)]
-	right = mslist[int(len(mslist)/2):]
+	left = mslist[:len(mslist)//2]
+	right = mslist[len(mslist)//2:]
 	
 	left = merge_sort(left)
 	right = merge_sort(right)
@@ -33,12 +33,12 @@ def merge(left,right):
 		elif len(right) > 0:
 			result.append(right[0])
 			right.pop(0)
-			
+
 	return result
 
 def main():
 
-	mslist = [-9,1,1,2,3,2,7,3,6,4,5,4,3,5,6,7,8,9,0,0]
+	mslist = [-9,1,1,2,3,2,7,3,6,4,5,4,3,5,6,7,8,9,0,0] * 10
 	print(merge_sort(mslist))
 
 if __name__ == "__main__":
